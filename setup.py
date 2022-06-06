@@ -2,10 +2,10 @@ import setuptools
 
 
 setuptools.setup(
-    name='fastplugin',
+    name='fastplug',
     version='0.0.1',
     author='denissden',
-    packages=['fastplugin'],
+    packages=['fastplug'],
     requires=[
         'setuptools',
         'PySimpleGUI'

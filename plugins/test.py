@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-import fastplugin.plugin as plugin
+import fastplug.plugin as plugin
 
 NAME = 'test'
 
@@ -23,11 +23,13 @@ COMMANDS = {
 
 UI = [
     [
-        sg.Radio("Radio button sample", 1, key='-radio-', enable_events=True),
-        sg.Radio("Another one", 1, key='-radio-', enable_events=True),
+        rad := sg.Radio("Radio button sample", 1, key='-radio-'),
+        rad2 := sg.Radio("Another one", 1, key='-radio2-'),
     ]
 ]
 
+rad.ChangeSubmits = True
+rad2.ChangeSubmits = True
 
 @plugin.command('-radio-')
 def radio(event, values):
